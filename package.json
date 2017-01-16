@@ -1,17 +1,17 @@
 {
   "name": "joda-misc",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Miscellaneous documents support for Joda",
   "keywords": [
     "ember-addon"
   ],
   "license": "AGPLv3+",
-  "author": "",
+  "author": "Tadej Novak <tadej@tano.si>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/joda-project/joda-misc",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
