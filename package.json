@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "license": "MIT",
+  "license": "AGPLv3+",
   "author": "",
   "directories": {
     "doc": "doc",
