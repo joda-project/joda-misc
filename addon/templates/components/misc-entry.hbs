@@ -1,0 +1,23 @@
+<div class="media-content">
+  <div class="content">
+    <p>
+      <strong>{{document.title}}</strong>
+      <small class="is-primary">{{document.miscType.name}}</small>
+      <br>
+      {{#each document.tags as |tag|}}
+        {{tag-label tag}}
+      {{/each}}
+    </p>
+  </div>
+</div>
+<div class="media-right has-text-centered">
+  {{#each document.files as |file|}}
+    {{#if file.public}}
+      {{file-icon-link file}}
+    {{else}}
+      {{#if session.isAuthenticated}}
+        {{file-icon-link file}}
+      {{/if}}
+    {{/if}}
+  {{/each}}
+</div>
