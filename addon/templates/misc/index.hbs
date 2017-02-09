@@ -8,7 +8,7 @@
             {{#single-select options=model.types selected=typeItem placeholder="Type" searchField="name" onchange=(action (mut typeItem)) as |type| }}
               {{type.name}}
             {{/single-select}}
-            <span class="icon"><i class="fa fa-file-o"></i></span>
+            <span class="icon">{{fa-icon "file-o"}}</span>
           </p>
         </div>
         <div class="panel-block">
@@ -16,7 +16,7 @@
             {{#multiple-select options=model.tags selected=tagsList placeholder="Tags" searchField="name" onchange=(action (mut tagsList)) as |tag| }}
               {{tag.name}}
             {{/multiple-select}}
-            <span class="icon"><i class="fa fa-tag"></i></span>
+            <span class="icon">{{fa-icon "tag"}}</span>
           </p>
         </div>
       {{/filter-sidebar}}

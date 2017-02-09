@@ -2,7 +2,12 @@
   <div class="content">
     <p>
       <strong>{{document.title}}</strong>
-      <small class="is-primary">{{document.miscType.name}}</small>
+      <small class="is-primary">
+        {{document.miscType.name}} ·
+        {{#link-to 'misc.edit' document class="icon is-small"}}
+          {{fa-icon "pencil"}}
+        {{/link-to}}
+      </small>
       <br>
       {{#each document.tags as |tag|}}
         {{tag-label tag}}

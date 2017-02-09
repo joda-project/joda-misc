@@ -1,7 +1,6 @@
 {
   "name": "joda-misc",
   "dependencies": {
-    "filesize": "^3.5.4",
-    "ImageViewer": "^1.1.3"
+    "filesize": "^3.5.4"
   }
 }

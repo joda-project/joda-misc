@@ -1,0 +1,64 @@
+<section class="section">
+  <div class="container">
+    <h3>Edit miscellaneous document</h3>
+    <form id="misc-edit" {{action "save" on="submit"}}>
+      <div class="block">
+        <h4>Basic info</h4>
+        <label class="label">Title</label>
+        <p class="control">
+          {{input class="input" type="text" value=model.title}}
+        </p>
+
+        <label class="label">Type</label>
+        <p class="control">
+          {{#single-select options=commonModel.types selected=model.miscType searchField="name" modelName="misc-type" onchange=(action (mut model.miscType)) as |type|}}
+            {{type.name}}
+          {{/single-select}}
+        </p>
+      </div>
+
+      <div class="block">
+        <h4>Metadata</h4>
+        <p class="control">
+          <label class="checkbox">
+            {{input type="checkbox" checked=model.verified}}
+            Verified
+          </label>
+        </p>
+        <p class="control">
+          <label class="checkbox">
+            {{input type="checkbox" checked=model.public}}
+            Public
+          </label>
+        </p>
+
+        <label class="label">Tags</label>
+        <p class="control">
+          {{#multiple-select options=commonModel.tags selected=model.tags searchField="name" modelName="tag" onchange=(action (mut model.tags)) as |tag| }}
+            {{tag.name}}
+          {{/multiple-select}}
+        </p>
+
+        <label class="label">Notes and comments</label>
+        <p class="control">
+          {{textarea class="textarea" value=model.notes}}
+        </p>
+      </div>
+
+      <p class="control">
+        <button class="button is-primary" type="submit">
+          <span class="icon is-small">
+            {{fa-icon "check"}}
+          </span>
+          <span>Save</span>
+        </button>
+        {{#link-to 'misc.view' model class="button is-link" activeClass="" }}
+          <span class="icon is-small">
+            {{fa-icon "times"}}
+          </span>
+          <span>Cancel</span>
+        {{/link-to}}
+      </p>
+    </form>
+  </div>
+</section>
