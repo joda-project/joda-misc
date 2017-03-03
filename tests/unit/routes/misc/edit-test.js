@@ -5,7 +5,7 @@ import {
 
 moduleFor('route:misc/edit', 'Unit | Route | misc/edit', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['service:session']
 });
 
 test('it exists', function(assert) {
