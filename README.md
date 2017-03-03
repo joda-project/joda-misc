@@ -1,30 +1,15 @@
 # joda-misc
 
-This README outlines the details of collaborating on this Ember addon.
+This is an Ember.js powered Miscellaneous Documents frontend addon for Joda - a simple
+reference management web application. For details see the [homepage](https://joda.tano.si)
+or [main repository](https://github.com/joda-project/joda).
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd joda-misc`
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+## Contributing
+There are several guidelines on contributing to Joda:
+ * [Submitting issues](https://github.com/joda-project/joda/blob/master/CONTRIBUTING.md#submitting-issues)
+ * [Proposing a new feature](https://github.com/joda-project/joda/blob/master/CONTRIBUTING.md#feature-requests)
+ * [Submiting a pull-request](CONTRIBUTING.md#pull-requests)
+ * [Building instructions](BUILDING.md)
 
 
 ## Copyright info

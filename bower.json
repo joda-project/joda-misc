@@ -1,6 +1,0 @@
-{
-  "name": "joda-misc",
-  "dependencies": {
-    "filesize": "^3.5.4"
-  }
-}
