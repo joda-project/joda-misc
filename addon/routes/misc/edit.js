@@ -42,7 +42,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         }
 
         item.get('tags').forEach((tag) => {
-          console.log(tag);
           if (!tag.get('id')) {
             promises.push(tag.save());
           }

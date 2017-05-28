@@ -29,7 +29,6 @@ export default Ember.Controller.extend({
 
   typeItemObserver: Ember.observer('typeItem', function() {
     let type = this.get('typeItem');
-    console.log(type);
     this.set('misc_type', type ? type.get('id') : null);
   }),
 
