@@ -1,17 +1,8 @@
-import Ember from 'ember';
-import SessionLoginStayMixin from 'joda-core/mixins/session-login-stay';
+import DocumentIndexRoute from 'joda-core/routes/document/index';
 
-export default Ember.Route.extend(SessionLoginStayMixin, {
+export default DocumentIndexRoute.extend({
   queryParams: {
-    'search': {
-      refreshModel: true,
-      replace: true
-    },
     'misc_type': {
-      refreshModel: true,
-      replace: true
-    },
-    'tags': {
       refreshModel: true,
       replace: true
     }

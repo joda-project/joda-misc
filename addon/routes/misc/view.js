@@ -1,12 +1,5 @@
-import Ember from 'ember';
-import SessionLoginStayMixin from 'joda-core/mixins/session-login-stay';
+import DocumentViewRoute from 'joda-core/routes/document/view';
 
-export default Ember.Route.extend(SessionLoginStayMixin, {
-  titleToken: function(model) {
-    return model.get('title');
-  },
-
-  model: function(params) {
-    return this.store.findRecord('misc-document', params.document_id);
-  },
+export default DocumentViewRoute.extend({
+  documentType: 'misc-document'
 });
