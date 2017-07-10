@@ -2,7 +2,7 @@ import Ember from 'ember';
 import DocumentIndexController from 'joda-core/controllers/document/index';
 
 export default DocumentIndexController.extend({
-  filters: ['search', 'tags', 'misc_type'],
+  filters: ['search', 'tags', 'misc_type', 'sort'],
 
   misc_type: null,
   typeItem: null,

@@ -1,29 +1,17 @@
-<section class="section">
-  <div class="container">
-    <h3>Miscellaneous documents</h3>
-    <div class="columns is-reversed">
-      {{#filter-sidebar search=search reset=(action "resetFilters")}}
-        <div class="panel-block">
-          <p class="control has-icon">
-            {{#single-select options=model.types selected=typeItem placeholder="Type" searchField="name" onchange=(action (mut typeItem)) as |type| }}
-              {{type.name}}
-            {{/single-select}}
-            <span class="icon">{{fa-icon "file-o"}}</span>
-          </p>
-        </div>
-        <div class="panel-block">
-          <p class="control has-icon">
-            {{#multiple-select options=model.tags selected=tagsList placeholder="Tags" searchField="name" onchange=(action (mut tagsList)) as |tag| }}
-              {{tag.name}}
-            {{/multiple-select}}
-            <span class="icon">{{fa-icon "tag"}}</span>
-          </p>
-        </div>
-      {{/filter-sidebar}}
-
-      <div class="column">
-        {{outlet}}
-      </div>
+{{#section-content-list title="Miscellaneous documents"}}
+  {{#filter-sidebar search=search sortTypes=sortTypes sortSelected=sortSelected reset=(action "resetFilters")}}
+    <div class="panel-block">
+      <p class="control has-icons-left">
+        {{#single-select options=model.types selected=typeItem placeholder="Type" searchField="name" onchange=(action (mut typeItem)) as |type| }}
+          {{type.name}}
+        {{/single-select}}
+        <span class="icon is-left">{{fa-icon "file-o"}}</span>
+      </p>
     </div>
+    {{filter-tags-block model=model.tags selected=tagsList}}
+  {{/filter-sidebar}}
+
+  <div class="column">
+    {{outlet}}
   </div>
-</section>
+{{/section-content-list}}
