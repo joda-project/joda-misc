@@ -3,7 +3,7 @@
 
 module.exports = {
   route: 'misc',
-  title: 'Miscellaneous',
+  title: 'misc.miscellaneous',
 
   item: 'misc-document',
   routesList: []
