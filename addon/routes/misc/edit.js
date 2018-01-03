@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { Promise as EmberPromise } from 'rsvp';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Route.extend(AuthenticatedRouteMixin, {
   titleToken: 'Edit',
 
   setupController: function(controller, model) {
@@ -47,7 +48,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
           }
         });
 
-        Ember.RSVP.Promise.all(promises).then(() => {
+        EmberPromise.all(promises).then(() => {
           item.save().then(() => {
             controller.transitionToRoute('misc.view', item);
           }).catch(() => {
